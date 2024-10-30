@@ -30,22 +30,15 @@ go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 
 Usage
 
-    Clone this repository:
+    Clone this repository: https://github.com/stuxMY/docon.git
 
-    bash
-
-git clone <repository-url>
+git clone https://github.com/stuxMY/docon.git
 cd docon
 
 Make the script executable:
-
-bash
-
 chmod +x docon.py
 
 Run the script and provide a domain when prompted:
-
-bash
 
     ./docon.py
 
