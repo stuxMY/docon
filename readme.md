@@ -1,10 +1,12 @@
 <div align="center">
     <a href="https://github.com/stuxMY/docon">
-        <img src="ttps://i.ibb.co/8dNMMss/Gemini-Generated-Image-v16drlv16drlv16d.jpg" alt="Logo" width="300" height="330">
+        <img src="https://i.ibb.co/8dNMMss/Gemini-Generated-Image-v16drlv16drlv16d.jpg" alt="Logo" width="300" height="330">
     </a>
     <h3>DOCON - DOMAIN RECON</h3>
 </div>
 
+![Python Version](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
+![Script Version](https://img.shields.io/badge/Version-v1.2.0-orange)
 
 
 Docon
