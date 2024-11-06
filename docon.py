@@ -28,12 +28,13 @@ def get_domains(base_domain):
 
 def run_nuclei_scan():
     try:
-        subprocess.run(["nuclei","-as","-l", "domain.txt", "-o", "nuclei_results.txt"], check=True)
-        print("Nuclei scan complete. Results saved in nuclei_result.txt.")
+        subprocess.run(["nuclei", "-l", "domain.txt", "-o", "nuclei_results.txt"], check=True)
+        print("Nuclei scan completed. Results saved in nuclei_results.txt.")
     except subprocess.CalledProcessError as e:
         print(f"An error occurred while running Nuclei: {e}")
 
 if __name__ == "__main__":
-    base_domain = input("Domain : >  ")
+    # Use input() function to capture domain name
+    base_domain = input("Domain : >  ").strip()
     get_domains(base_domain)
     run_nuclei_scan()
