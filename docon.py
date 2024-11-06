@@ -3,6 +3,7 @@
 import requests
 import re
 import subprocess
+from prompt_toolkit import prompt
 
 def get_domains(base_domain):
     url = f"https://crt.sh/?q=%25.{base_domain}&output=json"
@@ -34,7 +35,8 @@ def run_nuclei_scan():
         print(f"An error occurred while running Nuclei: {e}")
 
 if __name__ == "__main__":
-    # Use input() function to capture domain name
-    base_domain = input("Domain : >  ").strip()
+    # Use prompt() from prompt_toolkit to capture domain name
+    base_domain = prompt("Domain : >  ").strip()
     get_domains(base_domain)
     run_nuclei_scan()
+
