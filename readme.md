@@ -1,3 +1,12 @@
+<div align="center">
+    <a href="https://github.com/stuxMY/docon">
+        <img src="ttps://i.ibb.co/8dNMMss/Gemini-Generated-Image-v16drlv16drlv16d.jpg" alt="Logo" width="300" height="330">
+    </a>
+    <h3>LAZY S3</h3>
+</div>
+
+
+
 Docon
 
 Docon is a Python script designed to fetch subdomains of a given domain from crt.sh, validate them, and then run a Nuclei scan to find potential vulnerabilities.
@@ -9,14 +18,14 @@ Features
     Runs a Nuclei scan on the list of subdomains and saves the results in nuclei_results.txt.
 
 Prerequisites
-1. Python 3
+1. Python 3.x
 
 Ensure Python 3 is installed on your system.
 2. Required Python Libraries
 
 Install the necessary Python package:
 
-bash
+ ```python3
 
 pip install requests
 
@@ -27,10 +36,6 @@ Install Nuclei, a vulnerability scanner:
 bash
 
 go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-
-Usage
-
-    Clone this repository: https://github.com/stuxMY/docon.git
 
 git clone https://github.com/stuxMY/docon.git
 cd docon
@@ -49,9 +54,7 @@ Run the script and provide a domain when prompted:
         The Nuclei scan results are saved in nuclei_results.txt.
 
 Example
-
-plaintext
-
+python3 docon.py
 Domain : > example.com
 Saved 150 domains and subdomains for example.com in domain.txt.
 Nuclei scan completed. Results saved in nuclei_results.txt.
