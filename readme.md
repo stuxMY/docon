@@ -18,7 +18,7 @@ Features
     Validates and filters the retrieved subdomains.
     Saves subdomains in a domain.txt file.
     Runs a Nuclei scan on the list of subdomains and saves the results in nuclei_results.txt.
-
+ ```python3
 Prerequisites
 1. Python 3.x
 
@@ -26,8 +26,6 @@ Ensure Python 3 is installed on your system.
 2. Required Python Libraries
 
 Install the necessary Python package:
-
- ```python3
 
 pip install requests
 
