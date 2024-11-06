@@ -2,7 +2,7 @@
     <a href="https://github.com/stuxMY/docon">
         <img src="ttps://i.ibb.co/8dNMMss/Gemini-Generated-Image-v16drlv16drlv16d.jpg" alt="Logo" width="300" height="330">
     </a>
-    <h3>LAZY S3</h3>
+    <h3>DOCON - DOMAIN RECON</h3>
 </div>
 
 
