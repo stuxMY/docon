@@ -23,7 +23,7 @@ def get_domains_from_crtsh(domain):
         return []
 
 def get_base_domains_from_hackerone():
-    """Fetches domains from the HackerOne data JSON."""
+    """HackerOne Domain List"""
     url = "https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/refs/heads/main/data/hackerone_data.json"
     try:
         response = requests.get(url)
@@ -49,7 +49,6 @@ def gather_all_domains():
         subdomains = get_domains_from_crtsh(domain)
         all_domains.update(subdomains)
 
-    # Write all unique domains to domain.txt
     with open("domain.txt", "w") as file:
         for domain in sorted(all_domains):
             file.write(f"{domain}\n")
@@ -58,7 +57,7 @@ def gather_all_domains():
     return all_domains
 
 def get_user_domains():
-    """Prompts the user for a custom domain and retrieves subdomains from crt.sh."""
+
     user_domain = prompt("Enter a domain to search subdomains for: ").strip()
     if user_domain:
         subdomains = get_domains_from_crtsh(user_domain)
