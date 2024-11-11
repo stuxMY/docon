@@ -12,15 +12,15 @@
 Docon
 
 Docon is a Python script designed to fetch subdomains of a given domain from crt.sh, validate them, and then run a Nuclei scan to find potential vulnerabilities.
-Features
-
-# THANKS TO https://github.com/jakejarvis/bounty-domains
-** DOCON use those source directly **
-
+## Features
+```python3
     Fetches subdomains for a specified base domain using crt.sh.
     Validates and filters the retrieved subdomains.
     Saves subdomains in a domain.txt file.
     Runs a Nuclei scan on the list of subdomains and saves the results in nuclei_results.txt.
+    
+# THANKS TO https://github.com/jakejarvis/bounty-domains
+
  ```python3
 Prerequisites
 1. Python 3.x
