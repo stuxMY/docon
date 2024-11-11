@@ -3,7 +3,6 @@
 import requests
 import re
 import subprocess
-import json
 from prompt_toolkit import prompt
 
 def get_domains_from_crtsh(domain):
@@ -58,6 +57,20 @@ def gather_all_domains():
     print(f"Saved {len(all_domains)} domains and subdomains in domain.txt.")
     return all_domains
 
+def get_user_domains():
+    """Prompts the user for a custom domain and retrieves subdomains from crt.sh."""
+    user_domain = prompt("Enter a domain to search subdomains for: ").strip()
+    if user_domain:
+        subdomains = get_domains_from_crtsh(user_domain)
+        if subdomains:
+            with open("domain.txt", "w") as file:
+                for domain in subdomains:
+                    file.write(f"{domain}\n")
+            print(f"Saved {len(subdomains)} subdomains for {user_domain} in domain.txt.")
+        else:
+            print("No subdomains found.")
+    return subdomains
+
 def run_nuclei_scan():
     try:
         subprocess.run(["nuclei", "-l", "domain.txt", "-o", "nuclei_results.txt"], check=True)
@@ -66,11 +79,12 @@ def run_nuclei_scan():
         print(f"An error occurred while running Nuclei: {e}")
 
 if __name__ == "__main__":
-    # Prompt user to choose the source of domains
-    choice = prompt("Type 'hackerone' to use HackerOne data and gather subdomains: ").strip().lower()
+    choice = prompt("Choose an option - type 'hackerone' to use HackerOne data or 'custom' to enter your own domain: ").strip().lower()
 
     if choice == 'hackerone':
         gather_all_domains()
+    elif choice == 'custom':
+        get_user_domains()
     else:
         print("Invalid option. Exiting.")
 
